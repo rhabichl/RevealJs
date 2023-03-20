@@ -25,7 +25,7 @@ public class MathHelper {
     public  static Integer add(int a, int b){
         return a + b;
     }
-}`
+}
 ```
 
 ---
