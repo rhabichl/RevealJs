@@ -33,7 +33,7 @@ public class MathHelper {
 ## Unit Test für die Funktion add()
 
 ```Java
-    class MathHelperTest {
+class MathHelperTest {
     @Test
     void add() {
         int a = 1;
