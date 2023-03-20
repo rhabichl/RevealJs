@@ -47,6 +47,10 @@ class MathHelperTest {
 
 ## Workflow 
 
+* push auf main branch
+* nutzt Linux Maschine
+* Java Version 17
+
 ---
 ### Bedingung festlegen
 ```yaml
@@ -72,16 +76,10 @@ jobs:
           distribution: 'adopt'
 ```
 ---
-### Wirkliche Tests ausführen
+### Test ausführen
 ```yaml
         # build and test the programm
       - name: Test
         run: mvn --batch-mode --update-snapshots verify
 ```
 --
-## Images
-
-<span>To say it with
-[Dilbert](https://dilbert.com/strip/1995-12-10):</span><!-- .element: class="decent x-small"-->
-
-![](https://assets.amuniversal.com/0e1eaf909fcf012f2fe600163e41dd5b)
