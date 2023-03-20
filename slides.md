@@ -25,7 +25,8 @@ public class MathHelper {
     public  static Integer add(int a, int b){
         return a + b;
     }
-}```
+}`
+```
 
 ---
 
@@ -44,25 +45,34 @@ public class MathHelper {
 
 ---
 
-## Callouts 
+## Workflow 
 
 <!--https://fsymbols.com/signs/bullet-point/-->
-```java
-String switchExpressionPreview13(Direction way) {
-    return switch (way) {                         ➊
-        case N -> "Up";                           ➋
-        case S -> { yield "Down"; }               ➌
-        case E, W -> "Somewhere left or right";
-        // default -> "Foo"                       ➍
-    };
-}
+```yaml
+name: Run automated tests on push
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+      # set up testing-env
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: maven
+
+      # build and test the programm
+      - name: Test
+        run: mvn --batch-mode --update-snapshots verify
 ```
-
-- ➊ `switch` can be used as expression
-- ➋ `->` instead of `:` → no `break;` necessary!
-- ➌ Lambdas can be used to. For _expressions_ they must `yield` a value [version]#13#
-- ➍ `default` can be ommitted if a) no expression or b) `enum` with every value handled
-
 ---
 
 ## Callouts  (Alternative)
