@@ -82,4 +82,3 @@ jobs:
       - name: Test
         run: mvn --batch-mode --update-snapshots verify
 ```
---
