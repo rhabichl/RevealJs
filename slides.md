@@ -48,7 +48,7 @@ class MathHelperTest {
 ## Workflow 
 
 <!--https://fsymbols.com/signs/bullet-point/-->
-```yaml
+```yaml[1-4, 11-12, 13-14]
 name: Run automated tests on push
 
 on:
