@@ -2,17 +2,34 @@
 
 --
 
-## Typography
+## CI/CD
 
 ---
 
-## Quotes
+### Definition 
+* CI = continuous integration
+* CD = continuous deployment
+---
 
-> Quotes are ~~hard~~ easy
-> to write - but you can use `code`
+### CI/CD bei Github
+* Workflow
+* Aufträge
+* Schritte
+
+---
+### Simple Workflow
+```yaml
+jobs:
+	test:
+		runs-on: ubuntu-latest
+		steps:
+			- name: print Hello World
+			  run: echo "Hello World"
+
+```
+###
 
 --
-
 ## Beispiel   
 
 ---
