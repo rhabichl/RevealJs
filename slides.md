@@ -47,18 +47,21 @@ class MathHelperTest {
 
 ## Workflow 
 
+---
+### Bedingung festlegen
 ```yaml
 on:
   push:
 ```
-<!-- .element: class="fragment" data-fragment-index="2" -->
+---
+### Plattform festlegen
 ```yaml
 jobs:
   test:
     runs-on: ubuntu-latest
 ```
-<!-- .element: class="fragment" data-fragment-index="2" -->
-<!-- .element: class="fragment" data-fragment-index="3" -->
+---
+### Umgebung bereit machen
 ```yaml
       - name: Checkout
         uses: actions/checkout@v3
@@ -68,15 +71,13 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 ```
-<!-- .element: class="fragment" data-fragment-index="3" -->
-
-<!-- .element: class="fragment" data-fragment-index="4" -->
+---
+### Wirkliche Tests ausführen
 ```yaml
         # build and test the programm
       - name: Test
         run: mvn --batch-mode --update-snapshots verify
 ```
-<!-- .element: class="fragment" data-fragment-index="4" -->
 --
 ## Images
 
