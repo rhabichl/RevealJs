@@ -11,149 +11,35 @@
 > Quotes are ~~hard~~ easy
 > to write - but you can use `code`
 
----
-
-## Styles
-
-You can freely mix **bold**, *italics*, `code` and normal styles
-
-* normal
-* **bold**
-* *italics*
-* `code`
-
 --
 
-## Lists
+## Beispiel   
 
 ---
 
-## Unordered Lists
+## Zu testender Code 
 
-* a
-* b
-  * 1
-  * 2
-    * I
-* c
-
----
-
-## Ordered Lists
-
-automatic numbering
-
-1. a
-1. b
-    1. 1
-    1. 2
-1. c
+```Java 
+public class MathHelper {
+    // adds two numbers and returns the sum
+    public  static Integer add(int a, int b){
+        return a + b;
+    }
+}```
 
 ---
 
-## Ordered Lists
+## Unit Test für die Funktion add()
 
-custom numbering
-
-1. a  
-2. b  
-    2.1. 1  
-    2.2. 2  
-3. c
-
----
-
-## Definition Lists
-
-(actually: line breaks in long lines in lists...)
-
-* First Term  
-This is the definition of the first term.
-* Second Term  
-This is one definition of the second term.  
-This is another definition of the second term.
-
----
-
-## Font Awesome
-
-*  Itym One<!-- .element: class="mdfa fa-info-circle"--> (this is a feature test in a very long item)
-*  Itym Two<!-- .element: class="mdfa fa-question-circle"-->
-*  Itym Three<!-- .element: class="mdfa fa-exclamation-circle"-->
-*  Itym 4<!-- .element: class="mdfa fa-exclamation-triangle"-->  
-with forced line break!
-
---
-
-## Fragments
-
----
-
-## Dont reveal all at once!
-
-- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
-- Item 3 <!-- .element: class="fragment" data-fragment-index="3" -->
-
----
-
-## Fancy!
-
-- Highlight Red <!-- .element: class="fragment highlight-red" data-fragment-index="2" -->
-- Fade In Then Out <!-- .element: class="fragment fade-in-then-out" data-fragment-index="1" -->
-- Slide up <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-- Appear and step aside  <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="4" -->
-
----
-
-## Distinguished
-
-- Item 1 <!-- .element: class="fragment semi-fade-out" data-fragment-index="1" -->
-- Item 2 <!-- .element: class="fragment semi-fade-out" data-fragment-index="2" -->
-- Item 3 <!-- .element: class="fragment semi-fade-out" data-fragment-index="3" -->
-- Item 4 <!-- .element: class="fragment semi-fade-out" data-fragment-index="4" -->
-- Item 5
-
----
-
-## FAQ (Example)
-
-*  Question One?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer One!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
-*  Question Two?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer Two!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
-*  Question Three?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer Three!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
-
---
-
-## Syntax highlighting   
-
----
-
-## Java 
-
-```java [1-6|3-5]
-public class TheFirst extends Object
-{
-  
-public static void main(String[] args)
-  
-{
-  
+```Java
+    class MathHelperTest {
+    @Test
+    void add() {
+        int a = 1;
+        int b = 1;
+        Assertions.assertEquals(a+b, MathHelper.add(a,b));
+    }
 }
-}
-```
-
----
-
-## JavaScript
-
-```js [1-2|3|4]
-    let a = 1;
-    let b = 2;
-    let c = x => 1 + 2 + x;
-    c(3);
 ```
 
 ---
