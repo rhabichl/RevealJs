@@ -1,4 +1,4 @@
-# Demo
+# GitHub Actions
 
 --
 
