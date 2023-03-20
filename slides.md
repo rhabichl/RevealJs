@@ -17,10 +17,13 @@
 * Schritte
 
 ---
-### Simple Workflow
+### Simpler Workflow
 ```yaml
+on:
+  push:
+
 jobs:
-	test:
+	say-hello:
 		runs-on: ubuntu-latest
 		steps:
 			- name: print Hello World
