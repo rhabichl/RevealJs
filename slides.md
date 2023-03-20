@@ -82,3 +82,35 @@ jobs:
       - name: Test
         run: mvn --batch-mode --update-snapshots verify
 ```
+--
+## Zuckerl 
+* Docker container
+* Enviroment Variables
+
+---
+### Docker container
+```yaml
+version: '3.8'
+services:
+  database:
+    container_name: ci-cd-test_postgres
+    image: postgres:15.1-alpine
+```
+---
+### start container
+```yaml
+...
+- name: Start Docker-Container
+  run: docker-compose up -d
+...
+```
+---
+### Enviroment Variables
+```yaml
+...
+- name: Greet person
+  run: echo "hello $NAME"
+  env:
+    NAME: Sengseis
+...
+```
