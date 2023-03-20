@@ -60,7 +60,6 @@ jobs:
 <!-- .element: class="fragment" data-fragment-index="2" -->
 <!-- .element: class="fragment" data-fragment-index="3" -->
 ```yaml
-        # set up testing-env
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -68,7 +67,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-          cache: maven
 ```
 <!-- .element: class="fragment" data-fragment-index="3" -->
 
@@ -79,18 +77,6 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 ```
 <!-- .element: class="fragment" data-fragment-index="4" -->
-
-#### Private methods in Interfaces<!-- .element: class="fragment" data-fragment-index="2" -->
-
-```java
-interface Version {
-    byte[] digits();
-    default String text() { return text(digits()); }
-    private String text(byte[] version) { … }
-}
-```
-<!-- .element: class="fragment" data-fragment-index="2" -->
-
 --
 ## Images
 
