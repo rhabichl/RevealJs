@@ -30,7 +30,7 @@ public class MathHelper {
 
 ---
 
-## Unit Test für die Funktion add()
+## Unit Test für add()
 
 ```Java
 class MathHelperTest {
