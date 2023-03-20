@@ -69,7 +69,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: maven
-```<!-- .element: class="fragment" data-fragment-index="3" -->
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
 
 <!-- .element: class="fragment" data-fragment-index="4" -->
 ```yaml
